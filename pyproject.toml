@@ -1,0 +1,41 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "adb-dbg"
+version = "0.1.0"
+description = "A lightweight Android process debugger with automatic PID reconnection."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [
+    { name = "Tirrou Oussama" }
+]
+keywords = [
+    "android",
+    "adb",
+    "debugging",
+    "logcat",
+    "android-debugging"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Debuggers"
+]
+
+[project.urls]
+Homepage = "https://github.com/TirrouOussama/adb-dbg"
+Repository = "https://github.com/TirrouOussama/adb-dbg"
+Issues = "https://github.com/TirrouOussama/adb-dbg/issues"
+
+[project.scripts]
+adb-dbg = "adb_dbg.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/adb_dbg"]
